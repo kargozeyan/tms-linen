@@ -1,0 +1,10 @@
+{
+  "name": "tms-linen",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
