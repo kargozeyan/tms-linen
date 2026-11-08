@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:9.7.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./server/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+volumes:
+  mysql-data:

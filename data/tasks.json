@@ -1,0 +1,226 @@
+[
+  {
+    "task_id": "T-G01",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G01",
+    "reservation_id": "R-G01-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G02",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G02",
+    "reservation_id": "R-G02-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G03",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G03",
+    "reservation_id": "R-G03-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G04",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G04",
+    "reservation_id": "R-G04-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G05",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G05",
+    "reservation_id": "R-G05-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G06",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G06",
+    "reservation_id": "R-G06-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G07",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G07",
+    "reservation_id": "R-G07-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G08",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G08",
+    "reservation_id": "R-G08-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G09",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G09",
+    "reservation_id": "R-G09-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-G10",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-G10",
+    "reservation_id": "R-G10-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S1-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S1",
+    "reservation_id": "R-S1-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S1-B",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S1",
+    "reservation_id": "R-S1-B",
+    "planned_start": "2026-03-14T10:00:00Z"
+  },
+  {
+    "task_id": "T-S1-C",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S1",
+    "reservation_id": "R-S1-C",
+    "planned_start": "2026-03-18T10:00:00Z"
+  },
+  {
+    "task_id": "T-X-DEEP",
+    "task_type": "Deep Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S1",
+    "reservation_id": "R-S1-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-X-MISSING",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S1",
+    "reservation_id": "R-MISSING",
+    "planned_start": "2026-03-20T10:00:00Z"
+  },
+  {
+    "task_id": "T-S2-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S2",
+    "reservation_id": "R-S2-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S2-B",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S2",
+    "reservation_id": "R-S2-B",
+    "planned_start": "2026-03-14T10:00:00Z"
+  },
+  {
+    "task_id": "T-S3-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S3",
+    "reservation_id": "R-S3-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S4-MOVED",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S4-OLD",
+    "reservation_id": "R-S4-MOVED",
+    "planned_start": "2026-03-14T10:00:00Z"
+  },
+  {
+    "task_id": "T-S4-P",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S4-NEW",
+    "reservation_id": "R-S4-P",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S4-N",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S4-NEW",
+    "reservation_id": "R-S4-N",
+    "planned_start": "2026-03-18T10:00:00Z"
+  },
+  {
+    "task_id": "T-S5-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S5",
+    "reservation_id": "R-S5-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S6-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S6",
+    "reservation_id": "R-S6-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S7-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S7",
+    "reservation_id": "R-S7-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S8-A",
+    "task_type": "Main Cleaning",
+    "status": "Completed",
+    "listing_id": "L-S8",
+    "reservation_id": "R-S8-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S9-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S9",
+    "reservation_id": "R-S9-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  },
+  {
+    "task_id": "T-S9-B",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S9",
+    "reservation_id": "R-S9-B",
+    "planned_start": "2026-03-14T10:00:00Z"
+  },
+  {
+    "task_id": "T-S10-A",
+    "task_type": "Main Cleaning",
+    "status": "Pending",
+    "listing_id": "L-S10",
+    "reservation_id": "R-S10-A",
+    "planned_start": "2026-03-10T10:00:00Z"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "event_id": "E-101",
+    "aggregate_id": "R-S1-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:01:00Z",
+    "changes": [
+      {
+        "field": "guests_count",
+        "old": 1,
+        "new": 5
+      }
+    ]
+  },
+  {
+    "event_id": "E-102",
+    "aggregate_id": "R-S1-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:02:00Z",
+    "changes": [
+      {
+        "field": "planned_departure_time",
+        "old": "2026-03-14T10:00:00Z",
+        "new": "2026-03-14T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "E-201",
+    "aggregate_id": "R-S2-B",
+    "event_type": "Reservation.CustomFields.Updated",
+    "created_at": "2026-03-09T08:03:00Z",
+    "changes": [
+      {
+        "field": "requested_sofabed",
+        "old": false,
+        "new": true
+      }
+    ]
+  },
+  {
+    "event_id": "E-202",
+    "aggregate_id": "R-S2-B",
+    "event_type": "Reservation.CustomFields.Updated",
+    "created_at": "2026-03-09T08:04:00Z",
+    "changes": [
+      {
+        "field": "number_of_guests_override",
+        "old": null,
+        "new": 5
+      }
+    ]
+  },
+  {
+    "event_id": "E-301",
+    "aggregate_id": "R-S3-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:05:00Z",
+    "changes": [
+      {
+        "field": "planned_arrival_time",
+        "old": "2026-03-12T15:00:00Z",
+        "new": "2026-03-14T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "E-302",
+    "aggregate_id": "R-S3-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:06:00Z",
+    "changes": [
+      {
+        "field": "planned_arrival_time",
+        "old": "2026-03-14T15:00:00Z",
+        "new": "2026-03-11T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "E-401",
+    "aggregate_id": "R-S4-MOVED",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:07:00Z",
+    "changes": [
+      {
+        "field": "listing_id",
+        "old": "L-S4-OLD",
+        "new": "L-S4-NEW"
+      }
+    ]
+  },
+  {
+    "event_id": "E-601",
+    "aggregate_id": "R-S6-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:00:00Z",
+    "changes": [
+      {
+        "field": "guests_count",
+        "old": 1,
+        "new": 5
+      }
+    ]
+  },
+  {
+    "event_id": "E-601",
+    "aggregate_id": "R-S6-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:00:00Z",
+    "changes": [
+      {
+        "field": "guests_count",
+        "old": 1,
+        "new": 5
+      }
+    ]
+  },
+  {
+    "event_id": "E-701",
+    "aggregate_id": "R-S7-B",
+    "event_type": "Reservation.Created",
+    "created_at": "2026-03-09T08:08:00Z",
+    "changes": [],
+    "reservation": {
+      "reservation_id": "R-S7-B",
+      "listing_id": "L-S7",
+      "status": "Confirmed",
+      "planned_arrival_time": "2026-03-11T15:00:00Z",
+      "planned_departure_time": "2026-03-14T10:00:00Z",
+      "guests_count": 5,
+      "infants": 0,
+      "customFields": {
+        "number_of_guests_override": null,
+        "requested_sofabed": false
+      }
+    }
+  },
+  {
+    "event_id": "E-801",
+    "aggregate_id": "R-S8-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:09:00Z",
+    "changes": [
+      {
+        "field": "guests_count",
+        "old": 1,
+        "new": 5
+      }
+    ]
+  },
+  {
+    "event_id": "E-901",
+    "aggregate_id": "R-S9-A",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:10:00Z",
+    "changes": [
+      {
+        "field": "status",
+        "old": "InHouse",
+        "new": "CheckedOut"
+      }
+    ]
+  },
+  {
+    "event_id": "E-902",
+    "aggregate_id": "R-S9-B",
+    "event_type": "Reservation.Updated",
+    "created_at": "2026-03-09T08:11:00Z",
+    "changes": [
+      {
+        "field": "guests_count",
+        "old": 1,
+        "new": 5
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "listing_id": "L-G01",
+    "name": "2BR-101",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G02",
+    "name": "2BR-102",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G03",
+    "name": "2BR-103",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G04",
+    "name": "2BR-104",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G05",
+    "name": "2BR-105",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G06",
+    "name": "2BR-106",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G07",
+    "name": "ST-201",
+    "linen_attribute": "G:3;Beds:1;BedSpots:2;Sofabeds:1;SofaSpots:1"
+  },
+  {
+    "listing_id": "L-G08",
+    "name": "SS-401",
+    "linen_attribute": "G:2;Beds:1;BedSpots:2;Sofabeds:0;SofaSpots:0"
+  },
+  {
+    "listing_id": "L-G09",
+    "name": "3BR-2BA-301",
+    "linen_attribute": "G:8;Beds:3;BedSpots:6;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-G10",
+    "name": "2BR-501",
+    "linen_attribute": "G:8;Beds:2;BedSpots:4;Sofabeds:2;SofaSpots:4"
+  },
+  {
+    "listing_id": "L-S1",
+    "name": "2BR-211",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S2",
+    "name": "2BR-212",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S3",
+    "name": "2BR-213",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S4-OLD",
+    "name": "2BR-214",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S4-NEW",
+    "name": "3BR-2BA-302",
+    "linen_attribute": "G:8;Beds:3;BedSpots:6;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S5",
+    "name": "2BR-215",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S6",
+    "name": "2BR-216",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S7",
+    "name": "2BR-217",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S8",
+    "name": "2BR-218",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S9",
+    "name": "2BR-219",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  },
+  {
+    "listing_id": "L-S10",
+    "name": "2BR-220",
+    "linen_attribute": "G:6;Beds:2;BedSpots:4;Sofabeds:1;SofaSpots:2"
+  }
+]
