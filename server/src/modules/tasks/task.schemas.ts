@@ -15,4 +15,13 @@ export const taskSchema = z.object({
   planned_start: isoDate,
 });
 
+export const updateTaskSchema = z.object({
+  task_type: nonEmptyString.optional(),
+  status: taskStatus.optional(),
+  listing_id: nonEmptyString.nullable().optional(),
+  reservation_id: nonEmptyString.nullable().optional(),
+  planned_start: isoDate.optional(),
+});
+
 export type Task = z.output<typeof taskSchema>;
+export type TaskChanges = z.output<typeof updateTaskSchema>;

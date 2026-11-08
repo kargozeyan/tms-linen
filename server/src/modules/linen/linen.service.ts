@@ -21,7 +21,7 @@ export async function computeLinen(db: DB, task: Task) {
   return calculateLinen(listing, task.planned_start, current, next);
 }
 
-export async function recalculateLinen(db: DB, task: Task, eventId: string, reason: string) {
+export async function recalculateLinen(db: DB, task: Task, eventId: string | null, reason: string) {
   const linen = await findLinen(db, task.task_id);
   const oldValues = linen && toLinenValues(linen);
   const newValues = await computeLinen(db, task);

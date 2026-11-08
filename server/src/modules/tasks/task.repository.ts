@@ -2,6 +2,8 @@ import type {RowDataPacket} from 'mysql2/promise';
 import {MAIN_CLEANING, OPEN_TASK_STATUSES, type Task} from './task.schemas';
 import type {DB} from '../../db/connection';
 
+const FIND_QUERY = `SELECT * FROM tasks WHERE task_id = ?`;
+
 const FIND_OPEN_MAIN_CLEANING_QUERY = `
     SELECT * FROM tasks
     WHERE reservation_id = ? AND task_type = ? AND status IN (?)`;
@@ -9,7 +11,17 @@ const FIND_OPEN_MAIN_CLEANING_QUERY = `
 const INSERT_QUERY = `INSERT INTO tasks (task_id, task_type, status, listing_id, reservation_id, planned_start)
      VALUES (?, ?, ?, ?, ?, ?)`;
 
+const UPDATE_QUERY = `
+    UPDATE tasks
+    SET task_type = ?, status = ?, listing_id = ?, reservation_id = ?, planned_start = ?
+    WHERE task_id = ?`;
+
 const MOVE_OPEN_QUERY = `UPDATE tasks SET listing_id = ? WHERE reservation_id = ? AND status IN (?)`;
+
+export async function findTask(db: DB, taskId: string) {
+  const [rows] = await db.query<RowDataPacket[]>(FIND_QUERY, [taskId]);
+  return rows[0] as Task | undefined;
+}
 
 export async function findOpenMainCleaningTasks(db: DB, reservationId: string) {
   const [rows] = await db.query<RowDataPacket[]>(FIND_OPEN_MAIN_CLEANING_QUERY, [
@@ -28,6 +40,17 @@ export async function insertTask(db: DB, task: Task): Promise<void> {
     task.listing_id,
     task.reservation_id,
     task.planned_start,
+  ]);
+}
+
+export async function updateTask(db: DB, task: Task) {
+  await db.query(UPDATE_QUERY, [
+    task.task_type,
+    task.status,
+    task.listing_id,
+    task.reservation_id,
+    task.planned_start,
+    task.task_id,
   ]);
 }
 

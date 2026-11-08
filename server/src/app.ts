@@ -1,12 +1,14 @@
 import express, {type NextFunction, type Request, type Response} from 'express';
 import {z} from 'zod';
 import {eventRoutes} from './modules/events/event.routes';
+import {taskRoutes} from './modules/tasks/task.routes';
 import {HttpError} from './shared/errors';
 
 export function createApp() {
   const app = express();
   app.use(express.json());
   app.use('/events', eventRoutes);
+  app.use('/tasks', taskRoutes);
   app.use(errorHandler);
   return app;
 }

@@ -41,7 +41,7 @@ export async function insertLinen(db: DB, taskId: string, linen: LinenValues) {
 export async function insertLinenHistory(
   db: DB,
   taskId: string,
-  eventId: string,
+  eventId: string | null,
   reason: string,
   oldValues: LinenValues | null,
   newValues: LinenValues | null,
