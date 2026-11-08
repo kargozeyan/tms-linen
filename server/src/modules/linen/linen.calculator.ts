@@ -1,29 +1,16 @@
 import {type LinenAttributes, type Listing, parseLinenAttribute} from '../listings/listing.schemas';
 import type {Reservation} from '../reservations/reservation.schemas';
+import type {LinenValues} from './linen.types';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_DAYS_UNTIL_NEXT = 2;
-
-export type TaskLinen = {
-  sheets: number;
-  towels: number;
-  bathmats: number;
-  handtowels: number;
-  dishtowels: number;
-  prepared_for_guests: number;
-  requested_sofabeds_count: number;
-  actual_guests: number;
-  infants: number;
-  number_of_guests_override: number | null;
-  requested_sofabed: boolean;
-};
 
 export function calculateLinen(
   listing: Listing,
   plannedStart: Date,
   current: Reservation,
   next: Reservation | undefined,
-): TaskLinen {
+): LinenValues {
   const attributes = parseLinenAttribute(listing.linen_attribute);
   const nextInWindow = next && isWithinWindow(next.planned_arrival_time, plannedStart) ? next : undefined;
   const plan = nextInWindow

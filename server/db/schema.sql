@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS processed_events;
+DROP TABLE IF EXISTS linen_history;
 DROP TABLE IF EXISTS task_linen;
 DROP TABLE IF EXISTS tasks;
 DROP TABLE IF EXISTS reservations;
@@ -19,7 +21,9 @@ CREATE TABLE reservations
     planned_departure_time DATETIME(3) NOT NULL,
     guests_count           INT         NOT NULL,
     infants                INT         NOT NULL,
-    custom_fields          JSON        NOT NULL
+    custom_fields          JSON        NOT NULL,
+    INDEX                  idx_reservations_listing_arrival (listing_id, planned_arrival_time),
+    CONSTRAINT fk_reservations_listing FOREIGN KEY (listing_id) REFERENCES listings (listing_id)
 );
 
 CREATE TABLE tasks
@@ -29,7 +33,8 @@ CREATE TABLE tasks
     status         VARCHAR(32) NOT NULL,
     listing_id     VARCHAR(64) NULL,
     reservation_id VARCHAR(64) NULL,
-    planned_start  DATETIME(3) NOT NULL
+    planned_start  DATETIME(3) NOT NULL,
+    INDEX          idx_tasks_reservation (reservation_id)
 );
 
 CREATE TABLE task_linen
@@ -47,4 +52,21 @@ CREATE TABLE task_linen
     number_of_guests_override INT NULL,
     requested_sofabed         BOOLEAN     NOT NULL,
     CONSTRAINT fk_task_linen_task FOREIGN KEY (task_id) REFERENCES tasks (task_id)
+);
+
+CREATE TABLE linen_history
+(
+    id         BIGINT       NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    task_id    VARCHAR(64)  NOT NULL,
+    event_id   VARCHAR(64) NULL,
+    reason     VARCHAR(255) NOT NULL,
+    old_values JSON NULL,
+    new_values JSON NULL,
+    created_at DATETIME(3)  NOT NULL,
+    CONSTRAINT fk_linen_history_task FOREIGN KEY (task_id) REFERENCES tasks (task_id)
+);
+
+CREATE TABLE processed_events
+(
+    event_id VARCHAR(64) NOT NULL PRIMARY KEY
 );

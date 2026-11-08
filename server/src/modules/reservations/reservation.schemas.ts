@@ -9,7 +9,7 @@ export const reservationSchema = z.object({
   planned_departure_time: isoDate,
   guests_count: count,
   infants: count,
-  customFields: z.object({
+  customFields: z.looseObject({
     number_of_guests_override: count.nullable().default(null),
     requested_sofabed: z.boolean().default(false),
   }),

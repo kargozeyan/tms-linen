@@ -1,0 +1,15 @@
+export type LinenValues = {
+  sheets: number;
+  towels: number;
+  bathmats: number;
+  handtowels: number;
+  dishtowels: number;
+  prepared_for_guests: number;
+  requested_sofabeds_count: number;
+  actual_guests: number;
+  infants: number;
+  number_of_guests_override: number | null;
+  requested_sofabed: boolean;
+};
+
+export type TaskLinen = LinenValues & {task_id: string};

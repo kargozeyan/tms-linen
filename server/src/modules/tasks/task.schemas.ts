@@ -2,6 +2,7 @@ import {z} from 'zod';
 import {isoDate, nonEmptyString} from '../../shared/schemas';
 
 export const MAIN_CLEANING = 'Main Cleaning';
+export const OPEN_TASK_STATUSES = ['Pending', 'In Progress', 'Paused'];
 
 const taskStatus = z.enum(['Pending', 'In Progress', 'Paused', 'Completed', 'Cancelled']);
 
