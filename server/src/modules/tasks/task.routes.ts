@@ -1,8 +1,20 @@
 import {Router} from 'express';
 import {taskSchema, updateTaskSchema} from './task.schemas';
-import {createTask, patchTask} from './task.service';
+import {createTask, getTask, getTaskLinenHistory, getTasks, patchTask} from './task.service';
 
 export const taskRoutes = Router();
+
+taskRoutes.get('/', async (_req, res) => {
+  res.json(await getTasks());
+});
+
+taskRoutes.get('/:id', async (req, res) => {
+  res.json(await getTask(req.params.id));
+});
+
+taskRoutes.get('/:id/linen/history', async (req, res) => {
+  res.json(await getTaskLinenHistory(req.params.id));
+});
 
 taskRoutes.post('/', async (req, res) => {
   const task = taskSchema.parse(req.body);

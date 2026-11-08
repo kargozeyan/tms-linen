@@ -13,3 +13,13 @@ export type LinenValues = {
 };
 
 export type TaskLinen = LinenValues & {task_id: string};
+
+export type LinenHistory = {
+  id: number;
+  task_id: string;
+  event_id: string | null;
+  reason: string;
+  old_values: LinenValues | null;
+  new_values: LinenValues | null;
+  created_at: Date;
+};

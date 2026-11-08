@@ -1,8 +1,10 @@
 import type {RowDataPacket} from 'mysql2/promise';
 import type {DB} from '../../db/connection';
-import type {LinenValues, TaskLinen} from './linen.types';
+import type {LinenHistory, LinenValues, TaskLinen} from './linen.types';
 
 const FIND_QUERY = `SELECT * FROM task_linen WHERE task_id = ?`;
+
+const FIND_HISTORY_QUERY = `SELECT * FROM linen_history WHERE task_id = ? ORDER BY id`;
 
 const INSERT_QUERY = `
     INSERT INTO task_linen (task_id, sheets, towels, bathmats, handtowels, dishtowels, prepared_for_guests,
@@ -19,6 +21,11 @@ const DELETE_QUERY = `DELETE FROM task_linen WHERE task_id = ?`;
 export async function findLinen(db: DB, taskId: string) {
   const [rows] = await db.query<RowDataPacket[]>(FIND_QUERY, [taskId]);
   return rows[0] ? toTaskLinen(rows[0]) : null;
+}
+
+export async function findLinenHistory(db: DB, taskId: string) {
+  const [rows] = await db.query<RowDataPacket[]>(FIND_HISTORY_QUERY, [taskId]);
+  return rows as LinenHistory[];
 }
 
 export async function insertLinen(db: DB, taskId: string, linen: LinenValues) {
@@ -60,6 +67,6 @@ export async function deleteLinen(db: DB, taskId: string) {
   await db.query(DELETE_QUERY, [taskId]);
 }
 
-function toTaskLinen({requested_sofabed, ...columns}: RowDataPacket) {
+export function toTaskLinen({requested_sofabed, ...columns}: RowDataPacket) {
   return {...columns, requested_sofabed: Boolean(requested_sofabed)} as TaskLinen;
 }

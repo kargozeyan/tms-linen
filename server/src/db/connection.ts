@@ -1,7 +1,7 @@
-import mysql, {type Connection} from 'mysql2/promise';
+import mysql, {type Connection, type Pool} from 'mysql2/promise';
 import {connectionOptions} from '../config/db';
 
-export type DB = Connection;
+export type DB = Connection | Pool;
 
 export const connectionWithMultiStatement = () => {
   return mysql.createConnection({
