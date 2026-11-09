@@ -1,10 +1,10 @@
 import type {RowDataPacket} from 'mysql2/promise';
 import type {DB} from '../../db/connection';
-import type {LinenHistory, LinenValues, TaskLinen} from './linen.types';
+import type {LinenHistoryEntry, LinenValues, TaskLinen} from './linen.types';
 
 const FIND_QUERY = `SELECT * FROM task_linen WHERE task_id = ?`;
 
-const FIND_HISTORY_QUERY = `SELECT * FROM linen_history WHERE task_id = ? ORDER BY id`;
+const FIND_HISTORY_QUERY = `SELECT * FROM linen_history WHERE task_id = ? ORDER BY created_at DESC, id DESC`;
 
 const INSERT_QUERY = `
     INSERT INTO task_linen (task_id, sheets, towels, bathmats, handtowels, dishtowels, prepared_for_guests,
@@ -25,7 +25,7 @@ export async function findLinen(db: DB, taskId: string) {
 
 export async function findLinenHistory(db: DB, taskId: string) {
   const [rows] = await db.query<RowDataPacket[]>(FIND_HISTORY_QUERY, [taskId]);
-  return rows as LinenHistory[];
+  return rows as LinenHistoryEntry[];
 }
 
 export async function insertLinen(db: DB, taskId: string, linen: LinenValues) {

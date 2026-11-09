@@ -14,7 +14,7 @@ export type LinenValues = {
 
 export type TaskLinen = LinenValues & {task_id: string};
 
-export type LinenHistory = {
+export type LinenHistoryEntry = {
   id: number;
   task_id: string;
   event_id: string | null;

@@ -13,7 +13,7 @@ const FIND_WITH_LINEN_QUERY = `
 const FIND_ALL_WITH_LINEN_QUERY = `
     SELECT * FROM tasks task
     LEFT JOIN task_linen linen ON linen.task_id = task.task_id
-    ORDER BY task.planned_start, task.task_id`;
+    ORDER BY task.planned_start DESC, task.task_id`;
 
 const FIND_OPEN_MAIN_CLEANING_QUERY = `
     SELECT * FROM tasks
