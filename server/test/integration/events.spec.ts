@@ -158,6 +158,13 @@ describe('rejected events', () => {
     await expect(isEventRecorded('E-X')).resolves.toBe(false);
   });
 
+  it('rejects a body that is not valid JSON with 400', async () => {
+    const {status, body} = await api.postRawEvent('{"event_id":');
+
+    expect(status).toBe(400);
+    expect(body.error).toEqual(expect.any(String));
+  });
+
   it('rolls back a database failure partway through an event', async () => {
     const {status, body} = await api.postEvent(createChangeEvent('E-X', 'R-S1-B', UPDATED, 'listing_id', 'L-UNKNOWN'));
 

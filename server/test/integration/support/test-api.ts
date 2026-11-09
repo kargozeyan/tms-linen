@@ -12,11 +12,15 @@ export async function startTestApi() {
   await once(server, 'listening');
   const baseUrl = `http://localhost:${(server.address() as AddressInfo).port}`;
 
-  async function send(method: string, path: string, body?: unknown): Promise<ApiResponse> {
+  function send(method: string, path: string, body?: unknown) {
+    return sendRaw(method, path, body === undefined ? undefined : JSON.stringify(body));
+  }
+
+  async function sendRaw(method: string, path: string, body?: string): Promise<ApiResponse> {
     const response = await fetch(`${baseUrl}${path}`, {
       method,
       headers: {'content-type': 'application/json'},
-      body: body === undefined ? undefined : JSON.stringify(body),
+      body,
     });
 
     return {status: response.status, body: await response.json()};
@@ -33,6 +37,8 @@ export async function startTestApi() {
     createTask: (task: unknown) => send('POST', '/tasks', task),
     updateTask: (taskId: string, changes: unknown) => send('PATCH', `/tasks/${taskId}`, changes),
     postEvent,
+    postRawEvent: (body: string) => sendRaw('POST', '/events/reservation', body),
+    getUnknownRoute: () => send('GET', '/unknown'),
     sendEvents: async (...eventIds: string[]) => {
       const responses: ApiResponse[] = [];
       for (const eventId of eventIds) {

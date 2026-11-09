@@ -258,3 +258,11 @@ describe('PATCH /tasks/:id', () => {
     expect((await api.updateTask(taskId, changes)).status).toBe(expectedStatus);
   });
 });
+
+describe('unknown routes', () => {
+  it('returns a JSON 404', async () => {
+    const {status, body} = await api.getUnknownRoute();
+
+    expect([status, body]).toEqual([404, {error: 'Route GET /unknown not found'}]);
+  });
+});

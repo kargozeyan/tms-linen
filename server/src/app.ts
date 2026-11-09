@@ -11,14 +11,19 @@ export function createApp() {
   app.use(express.json());
   app.use('/events', eventRoutes);
   app.use('/tasks', taskRoutes);
-  app.use(errorHandler);
+  app.use(rejectUnknownRoute);
+  app.use(handleError);
   return app;
 }
 
-function errorHandler(error: any, _req: Request, res: Response, _next: NextFunction) {
+function rejectUnknownRoute(req: Request) {
+  throw new HttpError(404, `Route ${req.method} ${req.path} not found`);
+}
+
+function handleError(error: any, _req: Request, res: Response, _next: NextFunction) {
   if (error instanceof z.ZodError) {
     res.status(400).json({error: z.prettifyError(error)});
-  } else if (error instanceof HttpError) {
+  } else if (error instanceof HttpError || error?.expose) {
     res.status(error.status).json({error: error.message});
   } else {
     console.error(error);
