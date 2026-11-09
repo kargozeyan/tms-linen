@@ -56,4 +56,6 @@ async function resetSchema(db: DB) {
   await db.query(schemaSql);
 }
 
-await seed();
+if (import.meta.main) {
+  await seed();
+}
