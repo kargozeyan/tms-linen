@@ -5,6 +5,7 @@
   "scripts": {
     "start": "tsx --env-file=../.env src/server.ts",
     "seed": "tsx --env-file=../.env src/scripts/seed.ts",
+    "send-events": "tsx --env-file=../.env src/scripts/send-events.ts",
     "test": "vitest run",
     "test:unit": "vitest run --project unit",
     "test:integration": "vitest run --project integration"
