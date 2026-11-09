@@ -14,7 +14,7 @@ import {computeLinen} from '../modules/linen/linen.service';
 import {insertLinen} from '../modules/linen/linen.repository';
 import {connectionWithMultiStatement, type DB} from '../db/connection';
 
-async function seed() {
+export async function seed() {
   const listings = parseData(listingsJson, listingSchema);
   const reservations = parseData(reservationsJson, reservationSchema);
   const tasks = parseData(tasksJson, taskSchema);
